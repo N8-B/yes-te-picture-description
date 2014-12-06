@@ -1,0 +1,66 @@
+.image-grid-half
+  +outer-container
+  margin: $margin*2 0
+  
+  figure
+    height: auto
+    max-width: 100%
+    margin:
+      top: 0
+      bottom: 0
+    +media($mobile)  
+      +fill-parent
+    +media($mobile-landscape)
+      +fill-parent
+    +media($tablet)
+      +span-columns(6)
+      +omega(2n)
+    +media($tablet-landscape)
+      +span-columns(6)
+      +omega(2n)
+    +media($desktop)
+      +span-columns(6)
+      +omega(2n)
+    +media($largedesktop)
+      +span-columns(6)
+      +omega(2n)
+  figcaption
+    padding-top: 0
+      
+.image-grid-third
+  +outer-container
+  margin: $margin*2 0
+
+  img
+    height: auto
+    max-width: 100%
+    +media($mobile)  
+      +fill-parent
+    +media($mobile-landscape)
+      +fill-parent
+    +media($tablet)
+      +span-columns(4)
+      +omega(3n)
+    +media($tablet-landscape)
+      +span-columns(4)
+      +omega(3n)
+    +media($desktop)
+      +span-columns(4)
+      +omega(3n)
+    +media($largedesktop)
+      +span-columns(4)
+      +omega(3n)
+      
+.image-grid-pic-description
+  +display(flex)
+  +align-items(flex-start)
+  +flex-direction(row)
+  +justify-content(space-around)
+    
+  img
+    height: auto
+    max-width: auto
+    +flex(50%)
+
+#last
+  margin-right: 0px
